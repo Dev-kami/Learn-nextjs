@@ -3,17 +3,22 @@
 import React from "react";
 import Button from "./Button";
 
-const SearchPosts = () => {
-  const [query, setQuery] = React.useState("");
-
+const SearchPosts = ({
+  query,
+  setQuery,
+}: {
+  query: string;
+  setQuery: React.Dispatch<React.SetStateAction<string>>;
+}) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setQuery("");
   };
 
   return (
     <form
-      onSubmit={(e) => handleSubmit(e)}
-      className="flex items-center justify-center py-5 gap-5"
+      onSubmit={handleSubmit}
+      className="flex items-center justify-center py-5 gap-5 w-dvw"
     >
       <input
         type="search"
