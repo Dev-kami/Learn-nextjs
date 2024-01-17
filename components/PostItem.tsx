@@ -1,14 +1,8 @@
 "use client";
+
 import { useRouter } from "next/navigation";
-import React from "react";
 
-interface IPostItem {
-  id: number;
-  title: string;
-  body: string;
-}
-
-const PostItem = ({ id, title, body }: IPostItem) => {
+const PostItem = ({ id, title, body }: Posts) => {
   const router = useRouter();
 
   return (

@@ -1,16 +1,36 @@
 const Button = ({
   children,
   color,
+  onClick,
+  buttonClass,
 }: {
   children: React.ReactNode;
   color: string;
+  buttonClass?: string;
+  onClick?: () => void;
 }) => {
+  const className =
+    "px-5 py-1.5 rounded-md focus:ring-2 focus:ring-stone-400 focus:ring-offset-1";
+
+  if (onClick)
+    return (
+      <button
+        style={{
+          backgroundColor: color,
+        }}
+        className={`${className} ${buttonClass}`}
+        onClick={onClick}
+      >
+        {children}
+      </button>
+    );
+
   return (
     <button
       style={{
         backgroundColor: color,
       }}
-      className="px-5 py-1.5 rounded-md focus:ring-2 focus:ring-stone-400 focus:ring-offset-1"
+      className={`${className} + ${buttonClass}`}
     >
       {children}
     </button>

@@ -3,29 +3,35 @@
 import React from "react";
 import PostItem from "./PostItem";
 import SearchPosts from "./SearchPosts";
+import AddPosts from "./AddPosts";
 
 const Posts = ({ posts }: { posts: Posts[] }) => {
   const [query, setQuery] = React.useState("");
-  const [post, setPost] = React.useState(posts);
+  const [allPosts, setAllPosts] = React.useState(posts);
+
+  //   console.log(post);
 
   const filteredPosts =
-    post.length > 0
-      ? posts.filter((post) =>
+    query.length > 0
+      ? allPosts.filter((post) =>
           `${post.title} + ${post.body}`
             .toLowerCase()
             .includes(query.toLowerCase())
         )
-      : posts;
+      : allPosts;
 
   return (
-    <>
-      <SearchPosts query={query} setQuery={setQuery} />
-      <ul className="h-full grid grid-cols-3 gap-5 px-14">
+    <div className="w-dvw">
+      <div className="flex gap-10 px-14">
+        <AddPosts setAllPosts={setAllPosts} />
+        <SearchPosts query={query} setQuery={setQuery} />
+      </div>
+      <ul className="h-full grid grid-cols-3 gap-5 px-14 mt-10">
         {filteredPosts.map((post) => (
           <PostItem key={post.id} {...post} />
         ))}
       </ul>
-    </>
+    </div>
   );
 };
 
