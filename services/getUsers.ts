@@ -1,7 +1,5 @@
 export const getUsers = async () => {
-  const res = await fetch(
-    "https://jsonplaceholder.typicode.com/users?_limit=5"
-  );
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
 
   await new Promise((res) => setTimeout(() => res(0), 1000));
 

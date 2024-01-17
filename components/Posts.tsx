@@ -9,8 +9,6 @@ const Posts = ({ posts }: { posts: Posts[] }) => {
   const [query, setQuery] = React.useState("");
   const [allPosts, setAllPosts] = React.useState(posts);
 
-  //   console.log(post);
-
   const filteredPosts =
     query.length > 0
       ? allPosts.filter((post) =>
@@ -26,7 +24,7 @@ const Posts = ({ posts }: { posts: Posts[] }) => {
         <AddPosts setAllPosts={setAllPosts} />
         <SearchPosts query={query} setQuery={setQuery} />
       </div>
-      <ul className="h-full grid grid-cols-3 gap-5 px-14 mt-10">
+      <ul className="h-full grid sm:grid-cols-2 lg:grid-cols-4 md:grid-cols-3 2xl:grid-cols-5 gap-5 px-14 mt-10">
         {filteredPosts.map((post) => (
           <PostItem key={post.id} {...post} />
         ))}
