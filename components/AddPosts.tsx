@@ -23,8 +23,8 @@ const AddPosts = ({
       return [newPosts, ...posts];
     });
 
-    // setTitle("");
-    // setBody("");
+    setTitle("");
+    setBody("");
   };
 
   return (
