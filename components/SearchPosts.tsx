@@ -13,7 +13,7 @@ const SearchPosts = ({
   return (
     <div className="flex flex-col flex-1 gap-5 items-end">
       <h1 className="text-2xl mt-5 font-medium underline">Search posts</h1>
-      <div className="space-x-5">
+      <div className="space-x-5 space-y-2">
         <input
           type="search"
           placeholder="Search Posts..."

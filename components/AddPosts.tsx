@@ -10,7 +10,7 @@ const AddPosts = ({
   const [body, setBody] = useState("");
 
   const newPosts: Posts = {
-    id: Math.random(),
+    id: Math.round(Math.random() * 100),
     title,
     body,
   };

@@ -13,9 +13,12 @@ const NavLinks = () => {
   const activeClass = "text-white";
 
   return (
-    <header className="bg-stone-400 w-full h-10">
+    <header className="bg-stone-400 w-full h-12 flex items-center justify-between px-10">
+      <h1 className="text-stone-700 bg-stone-300 border border-stone-500 py-1 px-3 rounded-md cursor-default">
+        Practice.nextjs
+      </h1>
       <nav className="h-full">
-        <ul className="flex items-center justify-end px-10 gap-10 h-full">
+        <ul className="flex items-center gap-10 h-full">
           {links.map((link) => {
             const active = pathname === link.href && activeClass;
             return (

@@ -19,8 +19,8 @@ const Posts = ({ posts }: { posts: Posts[] }) => {
       : allPosts;
 
   return (
-    <div className="w-dvw">
-      <div className="flex gap-10 px-14">
+    <div>
+      <div className="flex gap-10 px-14 flex-col md:flex-row">
         <AddPosts setAllPosts={setAllPosts} />
         <SearchPosts query={query} setQuery={setQuery} />
       </div>
