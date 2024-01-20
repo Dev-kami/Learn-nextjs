@@ -13,8 +13,7 @@ const NavBar = () => {
   const activeClass = "text-white";
 
   return (
-    // bg-stone-400
-    <header className="w-full h-10 flex items-center justify-between px-10 bg-red-300">
+    <header className="bg-stone-400 w-full h-10 flex items-center justify-between px-10">
       <Link
         href="/"
         className="text-stone-700 bg-stone-300 border border-stone-500 py-0.5 px-2.5 rounded-md"
