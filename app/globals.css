@@ -33,6 +33,7 @@ body {
 }
 
 body {
+  overflow-x: hidden;
   background: #e3dede;
   display: flex;
   flex-direction: column;

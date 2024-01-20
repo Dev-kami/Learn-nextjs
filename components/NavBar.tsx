@@ -8,15 +8,19 @@ const links = [
   { href: "/posts", label: "Posts" },
 ];
 
-const NavLinks = () => {
+const NavBar = () => {
   const pathname = usePathname();
   const activeClass = "text-white";
 
   return (
-    <header className="bg-stone-400 w-full h-12 flex items-center justify-between px-10">
-      <h1 className="text-stone-700 bg-stone-300 border border-stone-500 py-1 px-3 rounded-md cursor-default">
+    // bg-stone-400
+    <header className="w-full h-10 flex items-center justify-between px-10 bg-red-300">
+      <Link
+        href="/"
+        className="text-stone-700 bg-stone-300 border border-stone-500 py-0.5 px-2.5 rounded-md"
+      >
         Practice.nextjs
-      </h1>
+      </Link>
       <nav className="h-full">
         <ul className="flex items-center gap-10 h-full">
           {links.map((link) => {
@@ -35,4 +39,4 @@ const NavLinks = () => {
   );
 };
 
-export default NavLinks;
+export default NavBar;

@@ -43,7 +43,8 @@ const Users = ({ users }: { users: User[] }) => {
         <h1 className="font-semibold text-2xl underline">Users</h1>
         <Filter />
       </div>
-      <table className="border border-stone-400 rounded-lg mt-5 p-3 max-w-full w-[70rem]">
+
+      <table className="border border-stone-400 rounded-lg mt-5 p-3 w-[70rem]">
         <thead className="bg-stone-400 h-12">
           <tr className="text-left space-x-10 text-gray-800">
             <th className="pr-8 pl-3">Name</th>

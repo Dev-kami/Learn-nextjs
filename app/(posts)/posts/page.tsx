@@ -5,11 +5,7 @@ import Posts from "@/components/Posts";
 const PostsPage = async () => {
   const posts: Posts[] = await usePosts();
 
-  return (
-    <div>
-      <Posts posts={posts} />
-    </div>
-  );
+  return <Posts posts={posts} />;
 };
 
 export default PostsPage;

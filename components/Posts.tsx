@@ -19,7 +19,7 @@ const Posts = ({ posts }: { posts: Posts[] }) => {
       : allPosts;
 
   return (
-    <div>
+    <>
       <div className="flex gap-10 px-14 flex-col md:flex-row">
         <AddPosts setAllPosts={setAllPosts} />
         <SearchPosts query={query} setQuery={setQuery} />
@@ -29,7 +29,7 @@ const Posts = ({ posts }: { posts: Posts[] }) => {
           <PostItem key={post.id} {...post} />
         ))}
       </ul>
-    </div>
+    </>
   );
 };
 
