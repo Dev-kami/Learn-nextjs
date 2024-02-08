@@ -19,17 +19,9 @@ const AddPosts = ({
     e.preventDefault();
     if (!title || !body) return;
 
-    await new Promise((res) =>
-      setTimeout(() => {
-        return setAllPosts((posts) => {
-          return [newPosts, ...posts];
-        });
-      }, 2000)
-    );
-
-    // setAllPosts((posts) => {
-    //   return [newPosts, ...posts];
-    // });
+    setAllPosts((posts) => {
+      return [newPosts, ...posts];
+    });
 
     setTitle("");
     setBody("");
