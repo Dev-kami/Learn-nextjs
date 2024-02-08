@@ -1,14 +1,16 @@
+type ButtonProps = {
+  children: React.ReactNode;
+  color: string;
+  buttonClass?: string;
+  onClick?: () => void;
+}
+
 const Button = ({
   children,
   color,
   onClick,
   buttonClass,
-}: {
-  children: React.ReactNode;
-  color: string;
-  buttonClass?: string;
-  onClick?: () => void;
-}) => {
+}: ButtonProps) => {
   const className =
     "px-5 py-1.5 rounded-md focus:ring-2 focus:ring-stone-400 focus:ring-offset-1";
 
