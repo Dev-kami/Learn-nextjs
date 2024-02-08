@@ -2,7 +2,12 @@
 
 import { useCopyToClipboard } from "react-use";
 
-const CopyButton = ({ Icon, title }: { title: string; Icon?: string }) => {
+type Props = {
+  title: string;
+  Icon?: string;
+};
+
+const CopyButton = ({ Icon, title }: Props) => {
   const [state, copyToClipboard] = useCopyToClipboard();
 
   return (

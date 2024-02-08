@@ -11,9 +11,9 @@ const SearchPosts = ({
   setQuery: React.Dispatch<React.SetStateAction<string>>;
 }) => {
   return (
-    <div className="flex flex-col flex-1 gap-5 items-end">
+    <div className="flex flex-col flex-1 gap-5 md:items-end items-start">
       <h1 className="text-2xl mt-5 font-medium underline">Search posts</h1>
-      <div className="space-x-5 space-y-2">
+      <div className="md:space-x-5 md:space-y-0 space-y-2 md:flex-row md:items-center flex flex-col items-start">
         <input
           type="search"
           placeholder="Search Posts..."

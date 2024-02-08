@@ -15,13 +15,21 @@ const AddPosts = ({
     body,
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!title || !body) return;
 
-    setAllPosts((posts) => {
-      return [newPosts, ...posts];
-    });
+    await new Promise((res) =>
+      setTimeout(() => {
+        return setAllPosts((posts) => {
+          return [newPosts, ...posts];
+        });
+      }, 2000)
+    );
+
+    // setAllPosts((posts) => {
+    //   return [newPosts, ...posts];
+    // });
 
     setTitle("");
     setBody("");

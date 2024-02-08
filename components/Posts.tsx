@@ -20,11 +20,11 @@ const Posts = ({ posts }: { posts: Posts[] }) => {
 
   return (
     <>
-      <div className="flex gap-10 px-14 flex-col md:flex-row">
+      <div className="flex gap-10 md:px-14 px-5 flex-col md:flex-row">
         <AddPosts setAllPosts={setAllPosts} />
         <SearchPosts query={query} setQuery={setQuery} />
       </div>
-      <ul className="h-full grid sm:grid-cols-2 lg:grid-cols-4 md:grid-cols-3 2xl:grid-cols-5 gap-5 px-14 mt-10">
+      <ul className="h-full grid sm:grid-cols-2 lg:grid-cols-4 md:grid-cols-3 2xl:grid-cols-5 gap-5 md:px-14 px-5 mt-10">
         {filteredPosts.map((post) => (
           <PostItem key={post.id} {...post} />
         ))}
