@@ -21,9 +21,7 @@ const SearchPosts = ({
           onChange={(e) => setQuery(e.target.value)}
           className="h-9 w-72 px-3 rounded-md outline-none focus:outline-2 focus:outline-stone-400 text-stone-700"
         />
-        <Button onClick={() => setQuery("")} color="#A8A29E">
-          Clear Search
-        </Button>
+        <Button onClick={() => setQuery("")}>Clear Search</Button>
       </div>
     </div>
   );

@@ -18,6 +18,14 @@ const Posts = ({ posts }: { posts: Posts[] }) => {
         )
       : allPosts;
 
+  function handleDeletePost(
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    postId: number
+  ) {
+    e.stopPropagation();
+    setAllPosts((posts) => posts.filter((post) => post.id !== postId));
+  }
+
   return (
     <>
       <div className="flex gap-10 md:px-14 px-5 flex-col md:flex-row">
@@ -26,7 +34,7 @@ const Posts = ({ posts }: { posts: Posts[] }) => {
       </div>
       <ul className="h-full grid sm:grid-cols-2 lg:grid-cols-4 md:grid-cols-3 2xl:grid-cols-5 gap-5 md:px-14 px-5 mt-10">
         {filteredPosts.map((post) => (
-          <PostItem key={post.id} {...post} />
+          <PostItem key={post.id} post={post} onDelete={handleDeletePost} />
         ))}
       </ul>
     </>

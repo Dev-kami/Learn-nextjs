@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <NavBar />
-        <div className="w-full">{children}</div>
+        <div className="w-full flex justify-center">{children}</div>
       </body>
     </html>
   );

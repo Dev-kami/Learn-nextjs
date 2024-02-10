@@ -50,9 +50,7 @@ const AddPosts = ({
           onChange={(e) => setBody(e.target.value)}
         ></textarea>
       </div>
-      <Button buttonClass="w-fit" color="#A8A29E">
-        Add Posts
-      </Button>
+      <Button className="w-fit">Add Posts</Button>
     </form>
   );
 };
